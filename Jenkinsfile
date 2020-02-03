@@ -31,4 +31,5 @@ pipeline {
         unstableThreshold: 95.0,
         otherFiles : "*.png",
     ])
+    }
 }
