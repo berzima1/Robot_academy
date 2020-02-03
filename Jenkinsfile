@@ -1,12 +1,13 @@
-pipeline {
-    agent none
+pipeline { 
+    agent any 
+    options {
+        skipStagesAfterUnstable()
+    }
     stages {
-        stage('Get_code') {
-            steps {
-                sh '''#!/bin/bash
-                    echo "Hello from bash"
-                '''
-                }
+        stage('Build') { 
+            steps { 
+                sh 'c:\Python27\Scripts\robot.exe .\Robot_academy.robot' 
             }
         }
     }
+}
