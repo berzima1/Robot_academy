@@ -1,6 +1,6 @@
 pipeline {
     stages {
-        stage('Release') {
+        stage('Get_code') {
             steps {
                 scm {
                     git('https://github.com/berzima1/Robot_academy.git')
