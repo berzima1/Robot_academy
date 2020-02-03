@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'robot Robot_academy.robot' 
+                sh 'echo "Hello World"' 
             }
         }
     }
