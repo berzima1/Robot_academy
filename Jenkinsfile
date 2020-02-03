@@ -8,7 +8,7 @@ pipeline {
             steps {
                 scm {
                     git('https://github.com/berzima1/Robot_academy.git')
-                    credentials('github-ci-key')
+                    credentials('Git_cred')
                     }
                 }
             }
