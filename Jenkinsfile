@@ -7,6 +7,8 @@ multibranchPipelineJob('RobotAcademy') {
         scm('H/15 * * * *')
     }
     steps {
-        echo "Running test suites..."
+        script {
+            echo "Running test suites..."
+        }
     }
 }
