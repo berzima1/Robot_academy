@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Build') { 
             steps { 
-                sh 'c:\Python27\Scripts\robot.exe .\Robot_academy.robot' 
+                sh 'robot Robot_academy.robot' 
             }
         }
     }
