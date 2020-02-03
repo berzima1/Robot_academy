@@ -1,14 +1,24 @@
-multibranchPipelineJob('RobotAcademy') {
-    scm {
-        git('https://github.com/berzima1/Robot_academy.git')
-        credentials('github-ci-key')
+pipeline {
+    agent none
+    options {
+        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '90', numToKeepStr: '30')
     }
-    triggers {
-        scm('H/15 * * * *')
-    }
-    steps {
-        script {
-            echo "Running test suites..."
+    stages {
+        stage('Release') {
+            steps {
+                scm {
+                    git('https://github.com/berzima1/Robot_academy.git')
+                    credentials('github-ci-key')
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            when { branch 'master' }
+            steps {
+                script {
+                    echo "Running test suites..."
+                    }
+                }
         }
     }
-}
