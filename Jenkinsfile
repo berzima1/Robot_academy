@@ -9,7 +9,7 @@ pipeline {
                 bat 'c:\\Python27\\Scripts\\robot.exe -d "%WORKSPACE%\\results" "%WORKSPACE%\\Robot_academy.robot"' 
             }
         }
-        stage('Publish') {
+        stage('Publish Test Results') {
             steps {
                 script {
                     echo "Collecting artifacts..."
