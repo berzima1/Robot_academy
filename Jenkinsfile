@@ -19,7 +19,8 @@ pipeline {
             }
         }
     }
-    def robotPublish() {
+}
+def robotPublish() {
     step([
         $class : 'RobotPublisher',
         outputPath : './results',
@@ -31,5 +32,4 @@ pipeline {
         unstableThreshold: 95.0,
         otherFiles : "*.png",
     ])
-    }
 }
