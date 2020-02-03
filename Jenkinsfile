@@ -6,6 +6,6 @@ job('RobotAcademy') {
         scm('H/15 * * * *')
     }
     steps {
-        echo "Running test suites (jobs)..."
+        echo "Running test suites..."
     }
 }
